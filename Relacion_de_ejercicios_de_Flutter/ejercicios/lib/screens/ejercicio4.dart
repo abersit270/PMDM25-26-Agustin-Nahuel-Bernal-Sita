@@ -7,6 +7,16 @@ class Ejercicio4 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Ejercicio 4')),
       drawer: Drawer(child: AppDrawer()),
+      body: Center(
+        child: Column(
+          children: [
+            Icon(Icons.home),
+            Icon(Icons.abc),
+            Icon(Icons.circle),
+            Icon(Icons.square),
+          ],
+        ),
+      ),
     );
   }
 }

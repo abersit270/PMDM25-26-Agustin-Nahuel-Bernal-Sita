@@ -7,6 +7,38 @@ class Ejercicio5 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Ejercicio 4')),
       drawer: Drawer(child: AppDrawer()),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            Image(
+              image: AssetImage('assets/images/perro.webp'),
+              width: 120,
+              height: 120,
+            ),
+            Image(
+              image: AssetImage('assets/images/arbolrosa.png'),
+              width: 120,
+              height: 120,
+            ),
+            Image(
+              image: AssetImage('assets/images/paisaje.png'),
+              width: 120,
+              height: 120,
+            ),
+            Image(
+              image: AssetImage('assets/images/pajaro.png'),
+              width: 120,
+              height: 120,
+            ),
+            Image(
+              image: AssetImage('assets/images/flor.webp'),
+              width: 120,
+              height: 120,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

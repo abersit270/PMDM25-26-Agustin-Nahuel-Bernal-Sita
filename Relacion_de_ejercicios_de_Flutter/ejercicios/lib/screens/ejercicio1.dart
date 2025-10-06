@@ -11,10 +11,10 @@ class Ejercicio1 extends StatelessWidget {
         children: [
           Text(
             'Nombre: Agustín Nahuel Bernal Sita',
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 30, fontFamily: "Courier New"),
           ),
           Text(
-            'Dirección del repositorio: TODO',
+            'Dirección del repositorio: https://github.com/abersit270/PMDM25-26-Agustin-Nahuel-Bernal-Sita.git',
             style: TextStyle(fontSize: 30, fontFamily: "Courier New"),
           ),
         ],

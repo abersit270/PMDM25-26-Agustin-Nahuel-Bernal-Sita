@@ -1,6 +1,8 @@
 import 'package:ejercicios/screens/ejercicio1.dart';
 import 'package:ejercicios/screens/ejercicio2.dart';
 import 'package:ejercicios/screens/ejercicio3.dart';
+import 'package:ejercicios/screens/ejercicio4.dart';
+import 'package:ejercicios/screens/ejercicio5.dart';
 import 'package:flutter/material.dart';
 import '../screens/home_screen.dart';
 
@@ -71,6 +73,34 @@ class AppDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => Ejercicio3()),
+              );
+            },
+          ),
+           ListTile(
+            leading: Text(
+              "4",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 4'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio4()),
+              );
+            },
+          ),
+           ListTile(
+            leading: Text(
+              "5",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 5'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio5()),
               );
             },
           ),

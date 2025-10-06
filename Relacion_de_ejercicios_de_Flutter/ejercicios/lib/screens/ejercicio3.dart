@@ -10,9 +10,9 @@ class Ejercicio3 extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Image(image: AssetImage('assets/images/perro.webp')),
-            Image(image: AssetImage('assets/images/flor.webp')),
-            Image(image: AssetImage('assets/images/arbolrosa.png')),
+            Image(image: AssetImage('assets/images/perro.webp'), width: 150),
+            Image(image: AssetImage('assets/images/flor.webp'), width: 150),
+            Image(image: AssetImage('assets/images/arbolrosa.png'), width: 150),
           ],
         ),
       ),
