@@ -1,7 +1,7 @@
+import 'package:ejercicios/screens/ejercicio1.dart';
+import 'package:ejercicios/screens/ejercicio2.dart';
+import 'package:ejercicios/screens/ejercicio3.dart';
 import 'package:flutter/material.dart';
-import 'package:holamundo/screens/ejercicio1.dart';
-import 'package:holamundo/screens/ejercicio2.dart';
-import 'package:holamundo/screens/ejercicio3.dart';
 import '../screens/home_screen.dart';
 
 class AppDrawer extends StatelessWidget {

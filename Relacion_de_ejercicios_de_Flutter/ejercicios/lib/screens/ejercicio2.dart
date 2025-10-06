@@ -1,5 +1,5 @@
+import 'package:ejercicios/utils/app_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:holamundo/utils/app_drawer.dart';
 
 class Ejercicio2 extends StatelessWidget {
   @override
