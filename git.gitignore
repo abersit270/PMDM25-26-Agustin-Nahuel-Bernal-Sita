@@ -1,0 +1,10 @@
+# Ignorar binarios y SDKs grandes
+*.zip
+*.tar.gz
+*.exe
+*.dll
+*.so
+*.dylib
+*.apk
+*.ipa
+*.py
