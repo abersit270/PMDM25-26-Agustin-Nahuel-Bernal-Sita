@@ -5,6 +5,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Pagina',
       home: Scaffold(
         appBar: AppBar(title: Text('Pagina de inicio')),
