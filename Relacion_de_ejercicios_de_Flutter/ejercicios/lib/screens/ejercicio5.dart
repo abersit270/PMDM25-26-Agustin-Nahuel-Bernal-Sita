@@ -5,7 +5,7 @@ class Ejercicio5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Ejercicio 4')),
+      appBar: AppBar(title: Text('Ejercicio 5')),
       drawer: Drawer(child: AppDrawer()),
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
