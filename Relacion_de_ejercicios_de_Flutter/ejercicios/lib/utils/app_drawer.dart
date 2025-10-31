@@ -1,4 +1,6 @@
 import 'package:ejercicios/screens/ejercicio1.dart';
+import 'package:ejercicios/screens/ejercicio10.dart';
+import 'package:ejercicios/screens/ejercicio11.dart';
 import 'package:ejercicios/screens/ejercicio2.dart';
 import 'package:ejercicios/screens/ejercicio3.dart';
 import 'package:ejercicios/screens/ejercicio4.dart';
@@ -161,6 +163,34 @@ class AppDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => Ejercicio9()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Text(
+              "10",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 10'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio10()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Text(
+              "11",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 11'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio11()),
               );
             },
           ),
