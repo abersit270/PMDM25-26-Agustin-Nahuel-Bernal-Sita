@@ -1,11 +1,12 @@
+import 'package:ejercicios/utils/app_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Ejercicio11 extends StatelessWidget {
   const Ejercicio11({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(child: AppDrawer()),
       appBar: AppBar(title: const Text('colorpopcosmetics'), centerTitle: true),
       body: SingleChildScrollView(
         child: Column(
@@ -18,7 +19,7 @@ class Ejercicio11 extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 45,
-                    backgroundImage: AssetImage('assets/images/perfil.jpg'),
+                    backgroundImage: AssetImage('assets/images/perro.webp'),
                   ),
                   const SizedBox(width: 20),
                   Expanded(
@@ -39,17 +40,27 @@ class Ejercicio11 extends StatelessWidget {
                 ],
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text("ColorPop Cosmetics"),
-                Text("Health/Beauty"),
-                Text("Made in LA"),
-                Text("Cruelty Free"),
-                Text("#ColourPopMe"),
-                Text("bit.ly/2w9g74q"),
-                Text("Followed by blablabla"),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Text(
+                    "ColorPop Cosmetics",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text("Health/Beauty"),
+                  Text("Made in LA"),
+                  Text("Cruelty Free"),
+                  Text("#ColourPopMe"),
+                  Text(
+                    "bit.ly/2w9g74q",
+                    style: TextStyle(color: Colors.blueAccent),
+                  ),
+                  Text("Followed by blablabla"),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -79,8 +90,6 @@ class Ejercicio11 extends StatelessWidget {
             ),
 
             const Divider(),
-
-            // 🟪 Historias destacadas
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 12.0,
@@ -100,7 +109,7 @@ class Ejercicio11 extends StatelessWidget {
                             radius: 35,
                             backgroundColor: Colors.grey[300],
                             backgroundImage: AssetImage(
-                              'assets/images/foto${(index % 3) + 1}.jpg',
+                              'assets/images/fotoMaquillaje${index + 1}.jpg',
                             ),
                           ),
                           const SizedBox(height: 6),
@@ -115,10 +124,7 @@ class Ejercicio11 extends StatelessWidget {
                 ),
               ),
             ),
-
             const Divider(),
-
-            // 🟧 Cuadrícula de publicaciones
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: GridView.count(
@@ -128,11 +134,13 @@ class Ejercicio11 extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 children: List.generate(
-                  12,
+                  9,
                   (index) => Container(
                     color: Colors.grey[300],
-                    child: Image.asset(
-                      'assets/images/foto${(index % 3) + 1}.jpg',
+                    child: Image(
+                      image: AssetImage(
+                        'assets/images/fotoMaquillaje${(index) + 1}.jpg',
+                      ),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -146,7 +154,6 @@ class Ejercicio11 extends StatelessWidget {
   }
 }
 
-// 📊 Widget para estadísticas
 class _StatItem extends StatelessWidget {
   final String label;
   final String value;
