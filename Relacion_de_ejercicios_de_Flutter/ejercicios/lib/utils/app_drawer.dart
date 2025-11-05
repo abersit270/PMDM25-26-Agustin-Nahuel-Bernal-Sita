@@ -1,16 +1,5 @@
-import 'package:ejercicios/screens/ejercicio1.dart';
-import 'package:ejercicios/screens/ejercicio10.dart';
-import 'package:ejercicios/screens/ejercicio11.dart';
-import 'package:ejercicios/screens/ejercicio2.dart';
-import 'package:ejercicios/screens/ejercicio3.dart';
-import 'package:ejercicios/screens/ejercicio4.dart';
-import 'package:ejercicios/screens/ejercicio5.dart';
-import 'package:ejercicios/screens/ejercicio6.dart';
-import 'package:ejercicios/screens/ejercicio7.dart';
-import 'package:ejercicios/screens/ejercicio8.dart';
-import 'package:ejercicios/screens/ejercicio9.dart';
+import 'package:ejercicios/screens/screens.dart';
 import 'package:flutter/material.dart';
-import '../screens/home_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -25,6 +14,7 @@ class AppDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
+
           // Inicio
           ListTile(
             leading: Icon(Icons.home),
@@ -191,6 +181,20 @@ class AppDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => Ejercicio11()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Text(
+              "12",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 12'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio12()),
               );
             },
           ),
