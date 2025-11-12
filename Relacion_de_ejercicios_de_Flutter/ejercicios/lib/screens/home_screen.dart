@@ -1,14 +1,36 @@
+import 'package:ejercicios/utils/thema_general.dart';
 import 'package:flutter/material.dart';
 import '../utils/app_drawer.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isDarkTheme = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: _isDarkTheme ? TemaOscuro.temaoscuro : TemaClaro.temaclaro,
       title: 'Pagina',
       home: Scaffold(
-        appBar: AppBar(title: Text('Pagina de inicio')),
+        appBar: AppBar(
+          title: Text('Pagina de inicio'),
+          actions: [
+            Switch(
+              value: _isDarkTheme,
+              onChanged: (value) {
+                setState(() {
+                  _isDarkTheme = value;
+                });
+              },
+            ),
+          ],
+        ),
         drawer: AppDrawer(),
         body: Column(
           children: [
