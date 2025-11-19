@@ -2,14 +2,14 @@ import 'package:ejercicios/utils/thema_general.dart';
 import 'package:flutter/material.dart';
 import '../utils/app_drawer.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _HomeScreenState extends State<HomeScreen> {
   bool _isDarkTheme = false;
   @override
   Widget build(BuildContext context) {
@@ -35,6 +35,10 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Container(
+              width: double.infinity,
+              height: 200,
+              color: Colors.amber,
+              padding: EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -50,10 +54,6 @@ class _MyAppState extends State<MyApp> {
                   Icon(Icons.info_outline_rounded),
                 ],
               ),
-              width: double.infinity,
-              height: 200,
-              color: Colors.amber,
-              padding: EdgeInsets.all(20),
             ),
           ],
         ),

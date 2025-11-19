@@ -23,7 +23,7 @@ class AppDrawer extends StatelessWidget {
               Navigator.pop(context); // cierra Drawer
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => MyApp()),
+                MaterialPageRoute(builder: (context) => HomeScreen()),
               );
             },
           ),
