@@ -1,8 +1,11 @@
 import 'package:ejercicios/utils/app_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Ejercicio11 extends StatelessWidget {
-  const Ejercicio11({super.key});
+  final Uri _repoUrl = Uri.parse("https://bit.ly/2w9g74q");
+  Ejercicio11({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,20 +48,30 @@ class Ejercicio11 extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     "ColorPop Cosmetics",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
-                  Text("Health/Beauty"),
-                  Text("Made in LA"),
-                  Text("Cruelty Free"),
-                  Text("#ColourPopMe"),
-                  Text(
-                    "bit.ly/2w9g74q",
-                    style: TextStyle(color: Colors.blueAccent),
+                  const Text("Health/Beauty"),
+                  const Text("Made in LA"),
+                  const Text("Cruelty Free"),
+                  const Text("#ColourPopMe"),
+                  InkWell(
+                    onTap: () async {
+                      if (await canLaunchUrl(_repoUrl)) {
+                        await launchUrl(
+                          _repoUrl,
+                          mode: LaunchMode.externalApplication,
+                        );
+                      }
+                    },
+                    child: const Text(
+                      'bit.ly/2w9g74q',
+                      style: TextStyle(fontSize: 14, color: Colors.blue),
+                    ),
                   ),
-                  Text("Followed by blablabla"),
+                  const Text("Followed by blablabla"),
                 ],
               ),
             ),

@@ -53,7 +53,6 @@ class _RandomColors extends State<Ejercicio12> {
               'Puntos: $points',
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
-
             Center(
               child: GestureDetector(
                 onTap: () {

@@ -30,6 +30,8 @@ class _RandomColors extends State<Ejercicio13> {
 
   final Random _random = Random();
 
+  late Timer _timer;
+
   @override
   void initState() {
     super.initState();
@@ -38,9 +40,21 @@ class _RandomColors extends State<Ejercicio13> {
     startTimer();
   }
 
+  void dispose() {
+    // Cancela el temporizador para evitar que llame a setState
+    // después de que el widget ha sido eliminado.
+    _timer.cancel();
+    super.dispose();
+  }
+
   void startTimer() {
-    Timer.periodic(const Duration(seconds: 1), (timer) {
-      moveContainerRandom();
+    // Almacena la instancia del Timer en la variable _timer
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      // Es una buena práctica verificar 'mounted' aquí también,
+      // aunque 'dispose' debería manejarlo.
+      if (mounted) {
+        moveContainerRandom();
+      }
     });
   }
 
