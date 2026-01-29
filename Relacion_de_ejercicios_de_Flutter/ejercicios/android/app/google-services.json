@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "886970546331",
+    "project_id": "agus-proyect",
+    "storage_bucket": "agus-proyect.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886970546331:android:d9076733bcd7bb2ac12e3e",
+        "android_client_info": {
+          "package_name": "com.example.holamundo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM3GEMgK8-5ndaNVzYmGTB7fYIIM4XCdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
