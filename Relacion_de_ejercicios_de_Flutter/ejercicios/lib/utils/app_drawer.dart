@@ -212,6 +212,34 @@ class AppDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading: Text(
+              "14",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 14'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio14()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Text(
+              "15",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            title: Text('Ejercicio 15'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Ejercicio15()),
+              );
+            },
+          ),
         ],
       ),
     );
