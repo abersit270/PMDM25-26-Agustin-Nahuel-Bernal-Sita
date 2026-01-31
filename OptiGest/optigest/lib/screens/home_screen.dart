@@ -9,17 +9,16 @@ class HomeScreen extends StatelessWidget {
     final bool isTablet = MediaQuery.of(context).size.width > 600;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F7FA), // Gris muy claro profesional
+      backgroundColor: const Color(0xFFF5F7FA),
       body: CustomScrollView(
         slivers: [
-          // Un AppBar elegante que se encoge al hacer scroll
           SliverAppBar(
             expandedHeight: 180.0,
             floating: false,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               title: const Text(
-                "OPTIGEST",
+                "MERKAVISION",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2,
@@ -63,41 +62,23 @@ class HomeScreen extends StatelessWidget {
                   title: "NUEVO PACIENTE",
                   subtitle: "Registrar datos y medidas",
                   icon: Icons.person_add_alt_1_rounded,
-                  color: const Color(0xFF2E7D32), // Verde éxito
-                  onTap: () {
-                    // Aquí navegaremos a la pantalla de datos
-                    print("Navegando a Registro...");
-                  },
+                  color: const Color(0xFF2E7D32),
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    '/registro',
+                  ),
                 ),
+
                 _buildMenuCard(
                   context,
                   title: "VER REGISTROS",
                   subtitle: "Historial de clientes",
                   icon: Icons.folder_shared_rounded,
-                  color: const Color(0xFF1565C0), // Azul primario
-                  onTap: () {
-                    print("Navegando a Listado...");
-                  },
-                ),
-                _buildMenuCard(
-                  context,
-                  title: "BUSCAR DNI",
-                  subtitle: "Acceso rápido a ficha",
-                  icon: Icons.search_rounded,
-                  color: const Color(0xFFEF6C00), // Naranja acción
-                  onTap: () {
-                    print("Abriendo buscador...");
-                  },
-                ),
-                _buildMenuCard(
-                  context,
-                  title: "AJUSTES",
-                  subtitle: "Configuración de impresión",
-                  icon: Icons.settings_suggest_rounded,
-                  color: Colors.blueGrey,
-                  onTap: () {
-                    print("Navegando a Ajustes...");
-                  },
+                  color: const Color(0xFF1565C0),
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    '/historial',
+                  ),
                 ),
               ]),
             ),
@@ -106,8 +87,6 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
-  // Widget para crear los botones de menú con estilo "limpio"
   Widget _buildMenuCard(
     BuildContext context, {
     required String title,

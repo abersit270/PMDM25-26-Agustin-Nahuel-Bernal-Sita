@@ -73,6 +73,8 @@ class _Ejercicio15State extends State<Ejercicio15> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+
+              // --- 1. Nombre ---
               TextFormField(
                 controller: _nombreController,
                 decoration: const InputDecoration(
@@ -91,6 +93,8 @@ class _Ejercicio15State extends State<Ejercicio15> {
                 },
               ),
               const SizedBox(height: 20),
+
+              // --- 2. Apellido ---
               TextFormField(
                 controller: _ultimoNombreController,
                 decoration: const InputDecoration(
@@ -109,6 +113,8 @@ class _Ejercicio15State extends State<Ejercicio15> {
                 },
               ),
               const SizedBox(height: 20),
+
+              // --- 3. Código Postal ---
               TextFormField(
                 controller: _codPostalController,
                 keyboardType: TextInputType.number,

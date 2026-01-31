@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart'; // Asegúrate de importar tu Home
+import 'home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
 
-    // Configuración de la animación (estilo juego)
+    // Configuración de la animación
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1500),
@@ -27,7 +27,6 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Simulación de carga de Base de Datos y Navegación
     _navigateToHome();
   }
 
@@ -67,7 +66,6 @@ class _SplashScreenState extends State<SplashScreen>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Icono principal con sombra suave
               Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
@@ -80,14 +78,14 @@ class _SplashScreenState extends State<SplashScreen>
                   ],
                 ),
                 child: const Icon(
-                  Icons.visibility_rounded, // Icono de ojo
+                  Icons.visibility_rounded,
                   size: 100,
                   color: Colors.white,
                 ),
               ),
               const SizedBox(height: 24),
               const Text(
-                "OPTIGEST",
+                "MERKAVISON",
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,

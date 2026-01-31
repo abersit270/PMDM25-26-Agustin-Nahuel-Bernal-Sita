@@ -40,14 +40,14 @@ class _PacienteScreenState extends State<PacienteScreen> {
             ),
             const SizedBox(height: 20),
 
-            // Campo Nombre (Ocupa todo el ancho)
+            // Campo Nombre
             CustomTextField(
               label: "Nombre Completo",
               icon: Icons.person,
               controller: _nombreController,
             ),
 
-            // DNI y Edad (Responsive: Row en tablet, Column en móvil)
+            // DNI y Edad
             if (isWide)
               Row(
                 children: [
@@ -95,11 +95,11 @@ class _PacienteScreenState extends State<PacienteScreen> {
             const SizedBox(height: 30),
 
             // Botón para pasar a la siguiente fase
-            PrimaryButton(
+           PrimaryButton(
               label: "CONTINUAR A REFRACCIÓN",
               onPressed: () {
-                // Aquí iría la navegación a la pantalla de los ojos
-                print("Datos guardados temporalmente, abriendo refracción...");
+                // Validar que no esté vacío (Opcional por ahora)
+                Navigator.pushNamed(context, '/refraccion'); 
               },
             ),
           ],

@@ -8,7 +8,7 @@ class ListadoScreen extends StatefulWidget {
 }
 
 class _ListadoScreenState extends State<ListadoScreen> {
-  // Lista ficticia para la visualización (luego vendrá de SQLite)
+  // Lista ficticia de pacientes
   final List<Map<String, String>> pacientes = [
     {"nombre": "Juan Pérez", "dni": "12345678", "fecha": "20/01/2026"},
     {"nombre": "María García", "dni": "87654321", "fecha": "22/01/2026"},
