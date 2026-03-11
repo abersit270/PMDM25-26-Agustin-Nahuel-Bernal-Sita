@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "titulo": "Estudiar para el examen",
+    "completada": false
+  },
+  {
+    "id": 2,
+    "titulo": "Configurar Firebase",
+    "completada": true
+  },
+  {
+    "id": 3,
+    "titulo": "Leer archivo JSON",
+    "completada": false
+  }
+]
